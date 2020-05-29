@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Dnevnik_Pitaniya.Autorization" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAIggAAAAAAgAAAAEAAAAACAAAgAAAAAEAAACAAA=</HashCode>
+      <FileName>Autorization.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Dnevnik_Pitaniya.My_Priem">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAgAAAAAAAAAAAAAgAACAAAIABAAAAAACAAAE=</HashCode>
+      <FileName>Classes\My_Priem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dnevnik_Pitaniya.My_Products">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAgAAAAAAAAAAAAAgAACAAAIAAAAAAAAAAAAE=</HashCode>
+      <FileName>Classes\My_Products.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dnevnik_Pitaniya.ProductName">
+    <Position X="9.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\ProductName.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dnevnik_Pitaniya.Products">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAgAAAAAAAAAAAAAgAACAAAIAAAAAAAAAAAAE=</HashCode>
+      <FileName>Classes\Products.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dnevnik_Pitaniya.User_Water">
+    <Position X="11" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAgAAABAAAAAAAABAA=</HashCode>
+      <FileName>Classes\Water.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dnevnik_Pitaniya.Personal" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>NAYgBIKjUAUQsSpBEEBAQYEQmIRhYq0A8kAACnkDgwA=</HashCode>
+      <FileName>Personal.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Dnevnik_Pitaniya.Registration" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAgAAAACACBAAAAEABAKAAAAIgACAAA=</HashCode>
+      <FileName>Registration.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Dnevnik_Pitaniya.User_Information" BaseTypeListCollapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ERIgIAAgAAQQgAgAAAACQIAAgAAAYCCAAgAAAgAAAAA=</HashCode>
+      <FileName>User_Information.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Dnevnik_Pitaniya.Water" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAghAAAAAAgBEEABCAAAAAQAAIAKAAAAgACkAgA=</HashCode>
+      <FileName>Water.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

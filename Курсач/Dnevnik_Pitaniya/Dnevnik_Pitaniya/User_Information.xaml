@@ -1,0 +1,41 @@
+﻿<Window x:Class="Dnevnik_Pitaniya.User_Information"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dnevnik_Pitaniya"
+        mc:Ignorable="d"
+        Title="Персональные данные" Height="600" Width="500" Background="Silver" WindowStartupLocation="CenterScreen" FontSize="16"  ResizeMode="CanMinimize" Icon="Images/icon.png">
+    <Grid Background="#2b2728" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="300*"/>
+            <ColumnDefinition Width="100*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Возраст" HorizontalAlignment="Left" Margin="99,25,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.363,1.041" Grid.ColumnSpan="2" FontSize="20" Foreground="White"/>
+        <TextBox x:Name="age" HorizontalAlignment="Left" Height="35" Margin="0.8,67,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontSize="20" LostFocus="Age_LostFocus" GotFocus="Age_GotFocus" Grid.Column="1" />
+        <Label Content="Пол" HorizontalAlignment="Left" Margin="176.8,25,0,0" VerticalAlignment="Top" FontSize="20" Grid.Column="1" RenderTransformOrigin="-0.241,0.582" Foreground="White"/>
+        <Label Content="Рост" HorizontalAlignment="Left" Margin="99,102,0,0" VerticalAlignment="Top" FontSize="20" Grid.ColumnSpan="2" Foreground="White"/>
+        <TextBox x:Name="height" HorizontalAlignment="Left" Height="35" Margin="99,139,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontSize="20" Grid.ColumnSpan="2" LostFocus="Height_LostFocus" GotFocus="Height_GotFocus" />
+        <Label Content="Вес" HorizontalAlignment="Left" Margin="176.8,102,0,0" VerticalAlignment="Top" FontSize="20" Grid.Column="1" RenderTransformOrigin="0.644,-0.19" Foreground="White"/>
+        <TextBox x:Name="weight" Grid.Column="1" Height="35" Margin="172.8,139,0.2,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="20" LostFocus="Weight_LostFocus" GotFocus="Weight_GotFocus" />
+        <Label Content="Суточная норма калорий" HorizontalAlignment="Left" Margin="0.8,331,0,0" VerticalAlignment="Top" FontSize="20" Grid.Column="1" Foreground="White"/>
+        <Label Content="Суточная норма воды (мл)" HorizontalAlignment="Left" Margin="0.8,410,0,0" VerticalAlignment="Top" FontSize="20" Grid.Column="1" Foreground="White"/>
+        <Label Content="Индекс массы тела" HorizontalAlignment="Left" Margin="0.8,247,0,0" VerticalAlignment="Top" FontSize="20" Grid.Column="1" Foreground="White"/>
+        <TextBox x:Name="index" HorizontalAlignment="Left" Height="37" Margin="99,284,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="293" FontSize="20" Grid.ColumnSpan="2" IsReadOnly="True" />
+        <TextBox x:Name="kall" HorizontalAlignment="Left" Height="37" Margin="99,368,0,0" TextWrapping="Wrap"  Text="" VerticalAlignment="Top" Width="293" FontSize="20" Grid.ColumnSpan="2" IsReadOnly="True"/>
+        <TextBox x:Name="water" HorizontalAlignment="Left" Height="37" Margin="99,447,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="293" FontSize="20" Grid.ColumnSpan="2" IsReadOnly="True"/>
+        <Button Content="Создать" Grid.Column="1" HorizontalAlignment="Left" Margin="79.8,506,0,0" VerticalAlignment="Top" Width="140" Height="38"  Template="{StaticResource ButtonTemplate}" Padding="0,0,0,5" Click="Create_User"/>
+        <ComboBox x:Name="gender" Grid.Column="1" Margin="172.8,67,0.2,0" VerticalAlignment="Top" Height="35" FontSize="18" LostFocus="Gender_LostFocus" GotFocus="Gender_GotFocus">
+            <ComboBoxItem IsSelected="True">Женский</ComboBoxItem>
+            <ComboBoxItem>Мужской</ComboBoxItem>
+        </ComboBox>
+        <Button Content="Рассчитать" Grid.Column="1" HorizontalAlignment="Left" Margin="80,200,0,0" VerticalAlignment="Top" Width="140" Height="38"  Template="{StaticResource ButtonTemplate}" Padding="0,0,0,5" Click="Сalculate"/>
+        <Button HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="30" Height="30"  Template="{StaticResource ButtonTemplate4}" Click="Back">
+            <StackPanel>
+                <Image Source="Images/back.png" Height="29" Margin="0,0,-0.2,0"/>
+            </StackPanel>
+        </Button>
+
+    </Grid>
+</Window>

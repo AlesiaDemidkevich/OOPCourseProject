@@ -1,0 +1,28 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Dnevnik_Pitaniya">
+
+    <ControlTemplate x:Key="ButtonTemplate1" TargetType="Button" >
+        <Border x:Name="buttonBorder" BorderBrush="Black" 
+                    TextBlock.Foreground="White" TextBlock.FontWeight="SemiBold" TextBlock.FontSize="14">
+            <Border.Background>
+                <SolidColorBrush Color="#2b2728"/>
+            </Border.Background>
+            <ContentPresenter RecognizesAccessKey="True" Margin="{TemplateBinding Padding}"></ContentPresenter>
+        </Border>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter TargetName="buttonBorder" Property="Background" Value="#290506"></Setter>
+                <Setter Property="Effect">
+                    <Setter.Value>
+                        <DropShadowEffect BlurRadius="10" Opacity="0.7"/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter TargetName="buttonBorder" Property="BorderBrush" Value="#290506"></Setter>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+</ResourceDictionary>

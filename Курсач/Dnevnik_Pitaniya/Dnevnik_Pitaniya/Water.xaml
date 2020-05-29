@@ -1,0 +1,87 @@
+﻿<Window x:Class="Dnevnik_Pitaniya.Water"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dnevnik_Pitaniya"
+        mc:Ignorable="d"
+        Title="Контроль выпитой воды" Height="450" Width="340" WindowStartupLocation="CenterScreen" FontSize="16" ResizeMode="CanMinimize" Icon="Images/icon.png" WindowStyle="None">
+    <Grid >
+        <Grid.Background>
+            <ImageBrush ImageSource="Images/fon2.png" ></ImageBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="250*"/>
+            <RowDefinition Height="350*"/>
+        </Grid.RowDefinitions>
+
+        <Rectangle  Opacity="0.7" HorizontalAlignment="Left" Height="155" Margin="10,10,0,0" VerticalAlignment="Top" Width="319"  Grid.Row="0">
+            <Rectangle.Effect>
+                <DropShadowEffect Color="Black" BlurRadius="25" Opacity="0.2"/>
+            </Rectangle.Effect>
+        </Rectangle>
+        <DataGrid x:Name="Water_Table"  Background="Transparent" RowBackground="Transparent" IsReadOnly="True"  HorizontalAlignment="Left" Height="270" Margin="10,0,0,9.6" VerticalAlignment="Bottom" Width="319" AutoGenerateColumns="False" HeadersVisibility="Column" Grid.RowSpan="2">
+            <DataGrid.Columns >
+                <DataGridTextColumn x:Name="P_date" Header="Дата" Binding="{Binding Path=Date}" Width="170" />
+                <DataGridTextColumn x:Name="P_water" Header="Объем воды" Binding="{Binding Path=Water}" Width="130" />
+            </DataGrid.Columns>
+            <DataGrid.Resources>
+                <Style BasedOn="{StaticResource {x:Type DataGridColumnHeader}}" TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="#2b2728" />
+                    <Setter Property="Foreground" Value="White" />
+                    <Setter Property="BorderBrush" Value="Black"/>
+                    <Setter Property="BorderThickness" Value="1 1 1 1"/>
+                    <Setter Property="Margin" Value="-1,-1,0,0" />
+                    <Setter Property="Height" Value="28" />
+                    <Setter Property="Width" Value="auto"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                </Style>
+            </DataGrid.Resources>
+        </DataGrid>
+        <Rectangle Fill="#2b2728" HorizontalAlignment="Left" RadiusX="10" RadiusY="10" Height="155" Margin="10,10,0,0" VerticalAlignment="Top" Width="319" Opacity="0.15"/>
+        <DatePicker x:Name="Date" FontSize="14" HorizontalAlignment="Left" Focusable="False" Margin="56,16,0,0" VerticalAlignment="Top" Width="121" Background="#2b2728" BorderBrush="#2b2728" SelectedDateFormat="Short" Height="30"/>
+        <Button HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Width="30" Height="30" Template="{StaticResource ButtonTemplate5}" Padding="0,0,2,2" Click="Left_Click">
+            <StackPanel Orientation="Horizontal" RenderTransformOrigin="0.188,0.197" Margin="0,0,-0.4,0.4">
+                <Image Source="Images/left.png" Margin="0,0,0,0.4" Width="18"/>
+            </StackPanel>
+        </Button>
+        <Button HorizontalAlignment="Left" Margin="185,16,0,0" VerticalAlignment="Top" Width="30" Height="30" Template="{StaticResource ButtonTemplate5}" Padding="2,0,0,2" Click="Right_Click">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="Images/right.png" Margin="0,0,0,0.4" Width="20"/>
+            </StackPanel>
+        </Button>
+        <Button  HorizontalAlignment="Left" Margin="23,57,0,0" VerticalAlignment="Top" Width="44" Template="{StaticResource ButtonTemplate4}" Height="70" Click="Add_300">
+            <StackPanel>
+                <Image Source="Images/water.png" Height="40" Margin="0,0,-0.2,0"/>
+                <Label Content="+300" FontSize="12" Height="30" FontWeight="SemiBold" Foreground="#000000" Margin="0,0,-0.2,0"/>
+            </StackPanel>
+        </Button>
+        <Button  HorizontalAlignment="Left" Margin="176,57,0,0" VerticalAlignment="Top" Width="41" Template="{StaticResource ButtonTemplate4}" Height="70" Click="Add_50">
+            <StackPanel>
+                <Image Source="Images/water.png" Height="40" Margin="0,0,-0.2,0"/>
+                <Label Content="+50" FontSize="12" Height="30" FontWeight="SemiBold" Foreground="#000000" Margin="0,0,-0.2,0"/>
+            </StackPanel>
+        </Button>
+        <Button  HorizontalAlignment="Left" Margin="288,16,0,0" VerticalAlignment="Top" Width="30" Height="30" Click="Close"  Template="{StaticResource ButtonTemplate4}">
+            <StackPanel>
+                <Image Source="Images/close.png" Height="29" Margin="0,0,-0.2,0"/>
+            </StackPanel>
+        </Button>
+        <TextBox x:Name="WaterBox" HorizontalAlignment="Left" Height="28" Margin="23,130,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="14" Width="100"/>
+        <Button Content="Добавить" HorizontalAlignment="Left" Margin="148,130,0,0" VerticalAlignment="Top" Width="78" Height="28" FontSize="14" Template="{StaticResource ButtonTemplate5}" Padding="0,0,0,2" Click="Add_Water"/>
+        <Button Content="Удалить" HorizontalAlignment="Left" Margin="242,130,0,0" VerticalAlignment="Top" Width="76" Height="28" FontSize="14" Template="{StaticResource ButtonTemplate5}" Padding="0,0,0,2" Click="Delete_Water"/>
+        <Button  HorizontalAlignment="Left" Margin="123,57,0,0" VerticalAlignment="Top" Width="44" Template="{StaticResource ButtonTemplate4}" Height="70" Click="Add_100">
+            <StackPanel>
+                <Image Source="Images/water.png" Height="40" Margin="0,0,-0.2,0"/>
+                <Label Content="+100" FontSize="12" Height="31" FontWeight="SemiBold" Foreground="#000000" Margin="0,0,-0.2,0"/>
+            </StackPanel>
+        </Button>
+        <Button  HorizontalAlignment="Left" Margin="72,57,0,0" VerticalAlignment="Top" Width="44" Template="{StaticResource ButtonTemplate4}" Height="70" Click="Add_200">
+            <StackPanel>
+                <Image Source="Images/water.png" Height="40" Margin="0,0,-0.2,0"/>
+                <Label Content="+200" FontSize="12" Height="30" FontWeight="SemiBold" Foreground="#000000" Margin="0,0,-0.2,0"/>
+            </StackPanel>
+        </Button>
+
+    </Grid>
+</Window>
